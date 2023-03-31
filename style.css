@@ -1,12 +1,164 @@
 body {
   font-family: sans-serif;
   background: lightgray;
+  counter-reset: page;
 }
 
 h2 {
-  break-before: page;
+  break-before: left;
+}
+#abouti{
+  font-size: 12px;
+  top: 40px;
+  position: relative;
+  
+  font-family: "new-hero", sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+h3 {
+  break-before: right;
+  font-family: "new-hero", sans-serif;
+font-weight: 400;
+font-style: normal;
+font-size: 25px;
+top: -31px;
+position: absolute;
 }
 
+
+img{
+  width: 8in;
+  height: 5in;
+  object-fit: cover;
+}
+
+p{
+  top: 30px;
+  position: relative;
+  font-family: "new-hero", sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+#inside{
+  position: absolute;
+  top: -95px;
+  
+  left: -85px;
+  
+}
+#address{
+  font-size: 20px;
+  left:380px;
+  top: 137px;
+  position: relative;
+}
+#title{
+  font-size: 25px;
+  left:320px;
+  top: 130px;
+  position: relative;
+}
+#subtitle{
+  font-size: 18px;
+  left:320px;
+  top: 150px;
+  position: relative;
+}
+#address2{
+  font-size: 15px;
+  left:380px;
+  top: 130.25px;
+  position: relative;
+}
+#food{
+  font-size: 14px;
+  left:380px;
+  top: 123px;
+  position: relative;
+}
+#food2{
+  font-size: 14px;
+  left:10cm;
+  bottom: -106.6322px;
+  position: relative;
+}
+#manousheh{
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  left: -10px;
+}
+#manoushehh{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  left: 20px;
+  size: 7cm;
+}
+#georgia{
+  position: absolute;
+  top: -95px;
+  right: -30px;
+  left: -25px;
+  width: 8in;
+  height: 5in;
+}
+#ethiopia{
+  position: absolute;
+  top: -95px;
+  right: -30px;
+  left: -25px;
+  width: 8in;
+  height: 5in;
+}
+#lebanon{
+  position: absolute;
+  top: -95px;
+  right: -30px;
+  left: -25px;
+  width: 8in;
+  height: 5in;
+}
+#nepal{
+  position: absolute;
+  top: -95px;
+  right: -30px;
+  left: -25px;
+  width: 8in;
+  height: 5in;
+}
+#denmark{
+  position: absolute;
+  top: -95px;
+  right: -30px;
+  left: -25px;
+  width: 8in;
+  height: 5in;
+}
+#uruguay{
+  position: absolute;
+  top: -95px;
+  right: -30px;
+  left: -25px;
+  width: 8in;
+  height: 5in;
+}
+#egypt{
+  position: absolute;
+  top: -95px;
+  right: -30px;
+  left: -25px;
+  width: 8in;
+  height: 5in;
+}
+#cover{
+  position: absolute;
+  top: -95px;
+  right: -30px;
+  left: -95px;
+  height: 1in;
+}
 @media print {
   body {
     background: white;
@@ -14,15 +166,41 @@ h2 {
 }
 
 @page {
-  size: 5in 8in;
-  margin-top: 0.25in;
+  size: 8in 5in; // cnt change this
+  margin-top: 0.25in;// u can change 
   margin-bottom: 0.5in;
+}
+
+
+.two-col {
+  column-count: 2;
+  column-gap: 2em;
 }
 @page:left {
   margin-left: 0.25in;
   margin-right: 1in;
+  @bottom-left {
+    content: counter(page);
+  }
+  @bottom-right {
+    content:"Around the World in NYC";
+    font-family: "new-hero", sans-serif;
+font-weight: 400;
+font-style: normal;
+  }
 }
 @page:right {
   margin-left: 1in;
   margin-right: 0.25in;
-}
+  @bottom-left {
+    content:"Chloé Nini";
+    font-family: "new-hero", sans-serif;
+font-weight: 400;
+font-style: normal;
+  }
+  @bottom-right {
+    content: counter(page);
+    font-family: "new-hero", sans-serif;
+font-weight: 400;
+font-style: normal;
+  }
